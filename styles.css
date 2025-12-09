@@ -1,0 +1,117 @@
+/* BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #111;
+  color: #eee;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* SIDEBAR */
+#sidebar {
+  width: 260px;
+  background: #1a1a1a;
+  border-right: 1px solid #333;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+  transition: transform 0.3s;
+}
+
+#sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* MENU */
+nav a {
+  display: block;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #ddd;
+  border: 1px solid #333;
+  transition: 0.2s;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  background: #333;
+}
+
+nav a.active {
+  background: #eee;
+  color: #111;
+  font-weight: bold;
+}
+
+/* ÁREA PRINCIPAL */
+#content {
+  margin-left: 260px;
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.viewer {
+  background: #000;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - 60px);
+  overflow: auto;
+}
+
+.viewer object,
+.viewer img {
+  width: 100%;
+  height: auto;
+  max-width: 1000px;
+}
+
+/* BOTÃO DE MENU (MOBILE) */
+#menu-toggle {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 999;
+  background: #222;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  border: 1px solid #444;
+}
+
+/* MOBILE: SIDEBAR ESCONDE E CONTENT OCUPA A TELA TODA */
+@media (max-width: 800px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  #sidebar {
+    transform: translateX(-260px);
+  }
+
+  #sidebar.open {
+    transform: translateX(0);
+  }
+
+  #content {
+    margin-left: 0;
+  }
+}
