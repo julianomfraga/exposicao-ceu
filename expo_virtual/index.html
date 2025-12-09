@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exposição Virtual - Hotspots Map</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main class="exposicao-container">
+        <svg id="hover-svg" class="hotspot-overlay"></svg>
+        
+        <img id="imagem-principal" src="sua-imagem-principal.jpg" usemap="#image-map" alt="Exposição Virtual Completa">
+        
+        <map name="image-map">
+            <area class="hotspot" data-id="toco" target="_blank" alt="Toco do cacique" title="Toco do cacique" coords="749,5701,749,5587,753,5371,746,5209,783,5091,859,5019,969,4947,1094,4921,1207,4944,1290,4970,1362,4985,1423,5023,1465,5099,1461,5697" shape="poly">
+            <area class="hotspot" data-id="cadeira" target="_blank" alt="Cadeira mãe Joaquina" title="Cadeira mãe Joaquina" coords="893,4985,783,5057,719,4118,764,4065,821,4054,844,4096,1196,3922,1196,3865,1272,3846,1298,3967,1313,4039,1332,4171,1343,4482,1870,4622,1892,5322,1775,5368,1752,5148,1502,5443,1446,4981,1253,4917,1022,4906" shape="poly">
+            <area class="hotspot" data-id="ponteiras" target="_blank" alt="Primeiras Ponteiras da casa" title="Primeiras Ponteiras da casa" coords="371,1179,0,1535" shape="rect">
+            <area class="hotspot" data-id="simbolo" target="_blank" alt="Simbolo da Terreira" title="Simbolo da Terreira" coords="2350,1957,2706,598,1620,235,1351,1862" shape="poly">
+            <area class="hotspot" data-id="cigana" target="_blank" alt="Cigana Cacilda" title="Cigana Cacilda" coords="2929,1976,2948,1919,2944,1878,2982,1855,3016,1855,3046,1859,3058,1885,3058,1912,3099,1930,3126,1946,3152,1915,3160,1881,3168,1825,3194,1809,3232,1832,3251,1874,3247,1904,3262,1927,3285,1980,3296,2021,3292,2055,3323,2089,3368,2127,3402,2214,3395,2317,3402,2396,2922,2396" shape="poly">
+            <area class="hotspot" data-id="sincretismo" target="_blank" alt="Sincretismo" title="Sincretismo" coords="307,1794,291,2816,265,3323,299,3441,409,3441,693,3411,1090,3358,1306,3308,1419,3195,1563,3059,1665,2934,1695,2797,1669,2642,1620,2506,1502,2294,1480,2203,1457,2082,1370,1991,1196,1900" shape="poly">
+            <area class="hotspot" data-id="bandeira_guarani" target="_blank" alt="Bandeira Guarani" title="Bandeira Guarani" coords="2320,5152,2396,5121,2475,5087,2532,5061,2589,5027,2221,4531,1885,4633,1885,4792,1926,4910,1991,5016" shape="poly">
+            <area class="hotspot" data-id="ponto_cacique" target="_blank" alt="Ponto Cacique" title="Ponto Cacique" coords="3281,4641,2948,4796,2630,4482,2929,4361" shape="poly">
+            <area class="hotspot" data-id="ponto_junta" target="_blank" alt="Ponto Junta Médica" title="Ponto Junta Médica" coords="2948,4845,2581,4467,2392,4516,2278,4554,2611,4974" shape="poly">
+        </map>
+
+    </main>
+
+    <div id="modal-descricao" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-body">
+                <h2 id="modal-titulo"></h2>
+                <img id="modal-imagem" src="" alt="Imagem de Detalhe" style="max-width: 100%; height: auto; margin-bottom: 15px; border-radius: 5px;">
+                <p id="modal-texto"></p>
+                <p><small id="modal-detalhes"></small></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

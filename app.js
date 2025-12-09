@@ -3,6 +3,7 @@ const pages = [
   { id: "Apresentacao",    label: "O projeto",     file: "Apresentacao.svg" },
   { id: "centro", label: "O Centro Espírita de Umbanda a Caminho da Verdade",     file: "bandeira-guarani-1.svg" },
   { id: "simbolo",    label: "O Simbolo do CEU - A Caminho da Verdade",     file: "simbolo.svg" },
+  { id: "expo",    label: "Visite a Exposição Virtual",     file: "expo_virtual/index.html" },
   { id: "bandeira2", label: "Bandeira Guarani - Apresentação", file: "bandeira-guarani-2.svg" },
   { id: "bandeira3", label: "Bandeira Guarani - Artefatos", file: "bandeira-guarani-3.svg" },
   { id: "cacique1",  label: "Cacique Morubissaba - Apresentação", file: "cacique-1.svg" },
@@ -48,11 +49,18 @@ function loadFromHash() {
 
   setActive(id);
 
-  viewerEl.innerHTML = `
-    <object type="image/svg+xml" data="${page.file}">
-      <img src="${page.file}">
-    </object>
-  `;
+ // Se for página externa → redireciona
+if (page.external) {
+  window.location.href = page.external;
+  return;
+}
+
+// Caso contrário, carrega SVG normalmente
+viewerEl.innerHTML = `
+  <object type="image/svg+xml" data="${page.file}">
+    <img src="${page.file}">
+  </object>
+`;
 
   // No mobile, fecha o menu ao clicar
   sidebar.classList.remove("open");
