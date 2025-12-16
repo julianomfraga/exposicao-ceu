@@ -10,9 +10,9 @@ const pages = [
   { id: "cacique2",  label: "Cacique Morubissaba - Artefatos", file: "cacique-2.svg" },
   { id: "junta1",    label: "Junta Médica - Apresentração",         file: "junta-medica-1.svg" },
   { id: "junta2",    label: "Junta Médica - Artefatos",     file: "junta-medica-2.svg" },
-  { id: "integrantes1",    label: "Integrantes 1",     file: "integrantes-1.svg" },
-  { id: "integrantes2",    label: "Integrantes 2",     file: "integrantes-2.svg" },
-  { id: "integrantes3",    label: "Integrantes 3",     file: "integrantes-3.svg" }
+  { id: "integrantes1",    label: "Integrantes 1", file: "integrantes-1.svg" },
+  { id: "integrantes2",    label: "Integrantes 2", file: "integrantes-2.svg" },
+  { id: "integrantes3",    label: "Integrantes 3", file: "integrantes-3.svg" }
   
 ];
 const menuEl = document.getElementById("menu");
